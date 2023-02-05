@@ -1,0 +1,176 @@
+body {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  nav {
+    background-color: crimson;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar .separator {
+    height: 30px;
+    width: 1px;
+    background-color: white;
+    margin: 0 10px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+    margin-top: 40px;
+  }
+  
+  .box {
+    background-color: white;
+    padding: 20px;
+    /* border-radius: 10px; */
+    box-shadow: 5px 5px 10px #ccc;
+    animation: slide-in 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  
+footer {
+    background-color: rgb(170, 0, 255);
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+  }
+  
+  .logo {
+    background-color: white;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 50%;
+    height: 50%;
+  }
+
+
+  
+  .form {
+    background-color: white;
+    box-shadow: 5px 5px 10px #ccc;
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  .form h1 {
+    margin-bottom: 30px;
+  }
+  
+  .form input[type="text"],
+  .form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid blue;
+    font-size: 18px;
+  }
+  
+  .form input[type="submit"] {
+    background-color:rgb(108, 108, 219);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .form input[type="submit"]:hover {
+    background-color: rgb(108, 108, 219);
+  }
+  
+  
+header h1 {
+    margin: 0;
+  }
+  
+  .career {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  
+  .career .card {
+    background-color: white;
+    box-shadow: 5px 5px 10px #ccc;
+    width: 400px;
+    height: 300px;
+    margin: 30px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .career h2 {
+    margin-bottom: 20px;
+  }
+  
+  .career p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .career .btn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .career .btn:hover {
+    background-color: darkblue;
+  }
+  
+ 
