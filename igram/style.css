@@ -1,0 +1,192 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+  
+}
+.mobile{
+  width: 360px;
+  height: 640px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 0px 0;
+  overflow-y: scroll;
+  display: block;
+  margin: auto auto;
+ }
+.mobile::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.mobile {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.header p{
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  position: sticky;
+  top:0;
+  background-color: white;
+}
+.bio{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 0 15px;
+}
+.profile-picture{
+  border: 2px solid black;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  background-image: url('https://img.icons8.com/color/48/000000/user-female-skin-type-5.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.number{
+  font-weight: 600;
+  line-height: 0;
+}
+.content{
+  font-size: 14px;
+}
+.name{
+  font-weight:600;
+  line-height:0.5;
+  font-size:14px;
+  padding: 0 15px;
+}
+.bio-content{
+  font-size: 14px;
+  line-height: 0.3;
+  padding: 0 15px;
+}
+.edit-profile{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0 15px;
+}
+.edit-box{
+  border: 1px solid #ddd;
+  width: 90%;
+  padding: 5px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+.arrow-box{
+  border: 1px solid #ddd;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+.edit-box p{
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 600;
+}
+.story{
+  margin-top: 20px;
+  padding: 0 15px;
+}
+.story p{
+  font-size: 14px;
+  line-height: 0.5;
+}
+.story-highlights{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+}
+.one{
+  background-image: url('https://img.icons8.com/bubbles/50/000000/airport.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.two{
+  background-image: url('https://img.icons8.com/bubbles/50/000000/new-delhi.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.three{
+   background-image:url('https://img.icons8.com/bubbles/50/000000/hamburger.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.story-one{
+  width: 40px;
+  height:40px;
+  border: 1px solid black;
+  border-radius: 100%;
+  margin-left: -20px;
+}
+.four{
+  background-image: url('https://img.icons8.com/android/24/000000/plus.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.five{
+  background-color: #e5e4e2;
+  border: 1px solid #e5e4e2;
+}
+.profile-tab{
+  display:flex;
+  justify-content: space-around;
+  margin: 30px 0 0;
+  width: 100%;
+  
+}
+.tab-one{
+  border-bottom: 1px solid black;
+  width: 50%;
+  text-align: center;
+  
+}
+.tab-two{
+  width: 50%;
+  text-align: center;
+  border-bottom: 1px solid #e5e4e2;
+}
+.images{
+  display: flex;
+  
+}
+.image-one{
+  width: 33.333333%;
+  text-align: center;
+  padding: 10px 0;
+}
+.img{
+  border-top: 1px solid black;
+}
+.center-image{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.bottom-navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 15px;
+  position: sticky;
+  background-color: white;
+  bottom:0;
+  
+}
+.navitem img{
+  width: 30px;
+}
+.last-item{
+  border: 1px solid black;
+  border-radius: 100%;
+  background-image: url('https://img.icons8.com/color/48/000000/user-female-skin-type-5.png');
+  width: 30px;
+  background-position: center;
+  background-size: 25px;
+}
+
