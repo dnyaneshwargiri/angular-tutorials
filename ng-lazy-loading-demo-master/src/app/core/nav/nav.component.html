@@ -1,0 +1,22 @@
+<!-- <nav class="main-nav">
+  <section class="nav-btn-container">
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a routerLink="/product" routerLinkActive="active">Products</a>
+    <a routerLink="/profile" routerLinkActive="active">Profile</a>
+  </section>
+</nav> -->
+
+<mat-toolbar color="primary">
+  <span>Lazy Loading</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <button mat-raised-button color="accent" class="nav-button">
+    <a class="links" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  </button>
+  <button mat-raised-button color="accent" class="nav-button">
+    <a class="links" routerLink="/product" routerLinkActive="active">Products</a>
+  </button>
+  <button mat-raised-button color="accent" class="nav-button">
+    <a class="links" routerLink="/profile" routerLinkActive="active">Profile</a>
+  </button>
+</mat-toolbar>

@@ -1,0 +1,32 @@
+.main-nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.nav-btn-container a {
+  padding: 0 10px;
+  color: white;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+  margin:0;
+  padding: 1em;
+}
+
+.nav-button {
+  margin-right: 10px;
+  padding: 0;
+}
