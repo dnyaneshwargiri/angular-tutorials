@@ -1,0 +1,252 @@
+<div
+  class="h-screen flex items-center justify-center h-full w-full bg-blue-100"
+>
+  <div
+    class="h-4/5 w-11/12 bg-white rounded-md flex items-center justify-center"
+  >
+    <!-- Your content goes here -->
+    <div class="h-4/5 w-11/12 bg-white m-0 p-0 flex items-center justify-center">
+      <form
+        [formGroup]="generalInfoForm"
+        (ngSubmit)="onSubmit()"
+        class="w-full max-w-md mx-auto"
+      >
+      <br/>
+        <span class="text-blue-600 font-bold"> General Information </span>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="title">
+            Title:
+          </label>
+          <label>
+            <select
+              formControlName="title"
+              class="w-full bg-white border border-gray-300 px-4 py-2 text-sm"
+            >
+              <option
+                *ngFor="let option of titleOptions"
+                [value]="option.value"
+              >
+                {{ option.label }}
+              </option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="firstName">
+            First Name:
+          </label>
+          <input
+            class="appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+            id="firstName"
+            type="text"
+            formControlName="firstName"
+            placeholder="First Name"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="lastName">
+            Last Name:
+          </label>
+          <input
+            class="appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+            id="lastName"
+            type="text"
+            formControlName="lastName"
+            placeholder="Last Name"
+            [class.ng-invalid]="generalInfoForm.get('lastName')?.invalid"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="position">
+            Position:
+          </label>
+          <input
+            class="appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+            id="position"
+            type="text"
+            formControlName="position"
+            placeholder="Position"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 font-bold mb-2"
+            for="businessAreaCode"
+          >
+            Business Area Code:
+          </label>
+          <input
+            class="appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+            id="businessAreaCode"
+            type="text"
+            formControlName="businessAreaCode"
+            placeholder="Business Area Code"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="file" class="block text-gray-700 font-bold mb-2"
+            >Upload File</label
+          >
+          <input
+            type="file"
+            id="file"
+            name="file"
+            accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            (change)="onFileChange($event)"
+            formControlName="file"
+            class="shadow appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+          />
+          <div
+            class="text-red-500 text-xs mt-1"
+            *ngIf="
+              generalInfoForm.get('file')?.invalid &&
+              (generalInfoForm.get('file')?.dirty ||
+                generalInfoForm.get('file')?.touched)
+            "
+          >
+            <div *ngIf="generalInfoForm.get('file')?.errors">
+              File type is not supported.
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="terms" class="flex items-center">
+            <input
+              type="checkbox"
+              id="terms"
+              formControlName="terms"
+              class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out"
+            />
+            <span class="ml-2 text-gray-700"
+              >I agree to the terms and conditions</span
+            >
+          </label>
+          <div
+            class="text-red-500 text-xs mt-1"
+            *ngIf="
+              generalInfoForm.get('terms')?.invalid &&
+              (generalInfoForm.get('terms')?.dirty ||
+                generalInfoForm.get('terms')?.touched)
+            "
+          ></div>
+        </div>
+
+        Is Form Valid=> {{ !generalInfoForm.invalid }}
+
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            [disabled]="generalInfoForm.invalid"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="h-4/5 w-11/12 bg-blue-700 m-0 p-0 flex items-center justify-center">
+      <form
+        [formGroup]="contactDetailsForm"
+        (ngSubmit)="onSubmit()"
+        class="w-full max-w-md mx-auto"
+      >
+        <span class="text-white font-bold"> Contact Details</span>
+        <div class="mb-4">
+          <label class="block text-white font-bold mb-2" for="title">
+            Stret No:
+          </label>
+          <label>
+            <select
+              formControlName="street"
+              class="w-full bg-white border border-gray-300 px-4 py-2 text-sm"
+            >
+              <option
+                *ngFor="let option of streetOptions"
+                [value]="option.value"
+              >
+                {{ option.label }}
+              </option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-white font-bold mb-2" for="additionalInfo">
+            Additional Info:
+          </label>
+          <input
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+            id="additionalInfo"
+            type="text"
+            formControlName="additionalInfo"
+            placeholder="additionalInfo"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-white font-bold mb-2" for="zipCode">
+            Zip Code:
+          </label>
+          <input
+            class="appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="zipCode"
+            type="text"
+            formControlName="zipCode"
+            placeholder="Last Name"
+            [class.ng-invalid]="contactDetailsForm.get('zipCode')?.invalid"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-white font-bold mb-2" for="place">
+            Place:
+          </label>
+          <input
+            class="shadow appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+            id="place"
+            type="text"
+            formControlName="place"
+            placeholder="place"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-white font-bold mb-2" for="email">
+            Email:
+          </label>
+          <input
+            class="appearance-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-b"
+            id="email"
+            type="text"
+            formControlName="email"
+            placeholder="email"
+          />
+        </div>
+
+        <div  class="mb-4">
+          <label for="newsletter-toggle" class="mr-2">Subscribe to newsletter</label>
+          <div class="relative">
+            <input type="checkbox" id="newsletter-toggle" name="newsletter-toggle" class="sr-only">
+            <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+            <div class="absolute w-6 h-6 bg-white rounded-full shadow inset-y-0 left-0"></div>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-white text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            [disabled]="contactDetailsForm.invalid"
+          >
+            Register User
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
