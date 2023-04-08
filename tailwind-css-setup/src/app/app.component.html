@@ -1,0 +1,84 @@
+<!-- Template Driven Form -->
+<!-- <form class="bg-white p-6 rounded-lg shadow-xl">
+    <h2 class="text-lg font-medium mb-4">Contact Us</h2>
+    <div class="mb-4">
+      <label class="block font-medium mb-2" for="name" >
+        Name
+      </label>
+      <input [(ngModel)]="name"
+        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+        id="name"
+        type="text"
+        name="name"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block font-medium mb-2" for="email">
+        Email
+      </label>
+      <input [(ngModel)]="email"
+        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+        id="email"
+        type="email"
+        name="email"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block font-medium mb-2" for="message">
+        Message
+      </label>
+      <textarea [(ngModel)]="message"
+        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+        id="message"
+        name="message"
+      ></textarea>
+    </div>
+    <button (click)="submitForm()" class="bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">
+      Submit 
+    </button>
+</form> -->
+
+<!-- Reactive Form -->
+
+<form
+  class="bg-white p-6 rounded-lg shadow-xl"
+  [formGroup]="form"
+  (ngSubmit)="submitForm()"
+>
+  <h2 class="text-lg font-medium mb-4">Contact Us</h2>
+  <div class="mb-4">
+    <label class="block font-medium mb-2" for="name"> Name </label>
+    <input
+      class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+      id="name"
+      type="text"
+      name="name"
+      formControlName="name"
+    />
+  </div>
+  <div class="mb-4">
+    <label class="block font-medium mb-2" for="email"> Email </label>
+    <input
+      class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+      id="email"
+      type="email"
+      name="email"
+      formControlName="email"
+    />
+  </div>
+  <div class="mb-4">
+    <label class="block font-medium mb-2" for="message"> Message </label>
+    <textarea
+      class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+      id="message"
+      name="message"
+      formControlName="message"
+    ></textarea>
+  </div>
+  <button
+    type="submit"
+    class="bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600"
+  >
+    Submit
+  </button>
+</form>
