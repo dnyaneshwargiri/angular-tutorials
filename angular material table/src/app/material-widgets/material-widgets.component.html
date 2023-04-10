@@ -1,0 +1,138 @@
+
+<div class="container">
+<br/>
+<br/>
+<mat-chip-listbox aria-label="Fish selection">
+  <mat-chip-option>One fish</mat-chip-option>
+  <mat-chip-option>Two fish</mat-chip-option>
+  <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+  <mat-chip-option color="warn">Warn fish</mat-chip-option>
+</mat-chip-listbox>
+
+<br/>
+<br/>
+<mat-slider>
+  <input matSliderThumb>
+</mat-slider>
+
+<br/>
+<br/>
+<mat-form-field appearance="fill">
+  <mat-label>Message</mat-label>
+  <input matInput value="Disco party!" #message>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Action</mat-label>
+  <input matInput value="Dance" #action>
+</mat-form-field>
+
+<button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+
+
+<br/>
+<br/>
+<br/>
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<h4>Basic native select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Cars</mat-label>
+  <select matNativeControl required>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </select>
+</mat-form-field>
+<br>
+<br>
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group>
+
+<br/>
+<br/>
+<br/>
+<mat-tab-group>
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+<br/>
+<br/>
+<br/>
+
+<p>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</p>
+</div>
