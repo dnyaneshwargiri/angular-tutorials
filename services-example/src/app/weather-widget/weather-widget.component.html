@@ -1,0 +1,11 @@
+<p>
+ Below are the weather Details-
+
+ <br/>
+ <br/>
+
+ {{weatherDetails | json }}
+</p>
+
+
+<app-weather-card [location]="weatherDetails.location" [current]="weatherDetails.current"></app-weather-card>
