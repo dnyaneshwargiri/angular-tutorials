@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" class="login-form">
+  <div>
+    <label>Username:</label>
+    <input type="text" [(ngModel)]="username" name="username" required />
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="password" name="password" required />
+  </div>
+  <button type="submit">Login</button>
+
+  <br>
+  <div
+    id="g_id_onload"
+    data-client_id="729430360367-mg4agire6b3knjcb86hbi4un185i7f5h.apps.googleusercontent.com"
+    data-context="use"
+    data-ux_mode="popup"
+    data-login_uri="http://localhost:3000/api/login"
+    data-itp_support="true"
+  ></div>
+
+  <div
+    class="g_id_signin"
+    data-type="standard"
+    data-shape="pill"
+    data-theme="filled_blue"
+    data-text="signin_with"
+    data-size="large"
+    data-logo_alignment="left"
+  ></div>
+</form>
