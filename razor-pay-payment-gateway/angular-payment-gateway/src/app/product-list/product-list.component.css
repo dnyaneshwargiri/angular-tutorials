@@ -1,0 +1,29 @@
+.product-list {
+  margin: 4rem;
+}
+
+.product-row {
+  margin-bottom: 4rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 34rem;
+  max-height: 34rem;
+  justify-content: space-between;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.product-image {
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}

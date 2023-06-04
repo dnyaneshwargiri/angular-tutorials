@@ -1,0 +1,19 @@
+.header {
+  background-color: #ffcb47;
+  color: #fff;
+  height: 4rem;
+  display: table;
+  width: 100%;
+}
+#title {
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+#logo{
+  width: 6rem;
+  height: 6rem;
+}
+
+
+
