@@ -1,0 +1,19 @@
+<div *ngFor="let user of users" class="userRow">
+  <div class="user-card">
+    <div class="user-avatar">
+      <img [src]="user.picture.large" alt="User Avatar">
+    </div>
+    <div class="user-details">
+      <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+      <p><strong>Gender:</strong> {{ user.gender }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Location:</strong> {{ user.location.city }}, {{ user.location.state }}, {{ user.location.country }}</p>
+      <p><strong>Phone:</strong> {{ user.phone }}</p>
+      <p><strong>Cell:</strong> {{ user.cell }}</p>
+      <p><strong>Date of Birth:</strong> {{ user.dob.date | date:'longDate' }}</p>
+      <p><strong>Registered:</strong> {{ user.registered.date | date:'longDate' }}</p>
+      <p><strong>Nationality:</strong> {{ user.nat }}</p>
+    </div>
+  </div>
+  
+</div>
