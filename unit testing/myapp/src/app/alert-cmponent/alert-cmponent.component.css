@@ -1,0 +1,23 @@
+
+.is-info {
+    background-color: #a5a5ff;
+    border: none;
+    height: 2rem;
+}
+
+.is-warning {
+    font-size: 1rem;
+    background-color: #f9f1ac;
+    padding: 1rem;
+    width: 30%;
+}
+
+.message-header {
+    font-size: larger;
+}
+
+.is-info {
+    background-color: #a5a5ff;
+    border: none;
+    height: 2rem;
+}
