@@ -1,0 +1,10 @@
+<div class="user-card">
+  <div class="profile-photo">
+    <img [src]="userProfile.picture" alt="Profile Photo" />
+  </div>
+  <div class="user-info">
+    <h2>{{ userProfile.given_name }} {{ userProfile.family_name }}</h2>
+    <p>{{ userProfile.email }}</p>
+    <p>ID: {{ userProfile.sub }}</p>
+  </div>
+</div>

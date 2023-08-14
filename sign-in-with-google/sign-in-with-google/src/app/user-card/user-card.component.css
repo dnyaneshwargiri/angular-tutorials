@@ -1,0 +1,35 @@
+.user-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 24em;
+    height: 8em;
+    margin: 2em;
+  }
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .user-info {
+    flex: 1;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
