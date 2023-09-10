@@ -1,0 +1,10 @@
+* {
+  font-family: sans-serif;
+}
+#showUsers {
+  background-color: rgb(130, 91, 238);
+  border: none;
+  color: #fff;
+  height: 4em;
+  width: 8em;
+}
