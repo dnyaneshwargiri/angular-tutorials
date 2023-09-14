@@ -1,0 +1,13 @@
+<div class="checkout-section">
+  Selected items-
+<ul>
+  <li *ngFor="let product of selectedProductList()">
+    {{ product.name }}
+  </li>
+</ul>
+
+<p>Total Price: ${{ totalPrice() }}</p>
+
+<button (click)="(checkout)">Checkout</button>
+</div>
+

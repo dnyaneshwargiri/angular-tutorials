@@ -1,0 +1,10 @@
+<div class="product-section">
+  <ul>
+    <li *ngFor="let item of items">
+      {{ item.name }} - ${{ item.price }}
+      <button (click)="addItem(item)">➕</button>
+      <button (click)="removeItem(item)">➖</button>
+    </li>
+  </ul>
+  <button (click)="resetProduct()">Reset Products</button>
+</div>
