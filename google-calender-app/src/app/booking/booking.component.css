@@ -1,0 +1,39 @@
+.card {
+  display: grid;
+  place-items: center;
+  background-color: #67bad5;
+  padding: 1em;
+}
+#schedule-button {
+  border: none;
+  background-color: #c8ffc8;
+  height: 2rem;
+  width: 10rem;
+  margin-left: 10rem;
+}
+#title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin-left: 4rem;
+}
+label {
+  display: inline-block;
+  width: 150px; 
+  text-align: right;
+  margin-right: 10px;
+}
+input[type="email"],
+input[type="datetime-local"] {
+  border: none;
+  border-bottom: 2px solid #333;
+  background-color: transparent; 
+  padding: 5px;
+  width: 200px; 
+  outline: none; 
+}
+input[type="email"]:focus,
+input[type="datetime-local"]:focus {
+  border-bottom: 2px solid #007bff; /* Change color on focus */
+}
