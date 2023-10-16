@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="form-container">
+    <p class="title-text">{{ jsonConfig.title }}</p>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <ng-container
+        class="form-element"
+        *ngFor="let field of jsonConfig.fields"
+      >
+        <ng-container [ngSwitch]="field.type">
+          <!-- Input Field -->
+          <div *ngSwitchCase="'input'">
+            <mat-form-field appearance="outline">
+              <input
+                matInput
+                [formControlName]="field.id"
+                [placeholder]="field.label"
+                [type]="field.inputType || 'text'"
+                [required]="field.required"
+              />
+            </mat-form-field>
+          </div>
+          <!-- Select Field -->
+          <div *ngSwitchCase="'select'">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ field.label }}</mat-label>
+              <mat-select
+                [formControlName]="field.id"
+                [required]="field.required"
+              >
+                <mat-option
+                  *ngFor="let option of field.options"
+                  [value]="option.value"
+                >
+                  {{ option.label }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <!-- Checkbox Field -->
+          <div *ngSwitchCase="'checkbox'">
+            <mat-checkbox
+              [formControlName]="field.id"
+              [required]="field.required"
+              >{{ field.label }}</mat-checkbox
+            >
+          </div>
+          <!-- Slider Field -->
+          <div *ngSwitchCase="'slider'">
+            <mat-label>{{ field.label }}</mat-label>
+            <mat-slider
+              [min]="field.minValue"
+              [max]="field.maxValue"
+              step="50"
+              discrete
+              [displayWith]="formatLabel"
+            >
+              <input matSliderThumb [formControlName]="field.id" />
+            </mat-slider>
+          </div>
+          <!-- Date Picker Field -->
+          <div *ngSwitchCase="'date'">
+            <mat-form-field>
+              <mat-label>{{ field.label }}</mat-label>
+              <input
+                matInput
+                [formControlName]="field.id"
+                [matDatepicker]="picker"
+                [required]="field.required"
+              />
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <!-- Radio Field -->
+          <div *ngSwitchCase="'radio'">
+            <mat-radio-group
+              [formControlName]="field.id"
+              [required]="field.required"
+            >
+              <mat-radio-button
+                *ngFor="let option of field.options"
+                [value]="option.value"
+                >{{ option.label }}</mat-radio-button
+              >
+            </mat-radio-group>
+          </div>
+          <!-- Add more cases for other field types as needed -->
+        </ng-container>
+      </ng-container>
+      <p *ngIf="form.invalid" class="alert">
+        *please answer mandatory questions
+      </p>
+      <button class="submit-button" type="submit" [disabled]="form.invalid">
+        SUBMIT
+      </button>
+    </form>
+  </div>
+</div>

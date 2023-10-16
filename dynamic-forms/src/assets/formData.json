@@ -1,0 +1,81 @@
+{
+  "title": "Search Apartment",
+  "fields": [
+    {
+      "id": "question1",
+      "type": "input",
+      "label": "Preferred City",
+      "required": true
+    },
+    {
+      "id": "question2",
+      "type": "select",
+      "required": true,
+      "label": "Number of Rooms ",
+      "options": [
+        {
+          "label": "1 room",
+          "value": "1"
+        },
+        {
+          "label": "2 rooms",
+          "value": "2"
+        },
+        {
+          "label": "3 rooms",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "id": "question3",
+      "type": "slider",
+      "label": "Your budget ",
+      "minValue": 500,
+      "maxValue": 1500,
+      "required": true
+    },
+
+    {
+      "id": "question4",
+      "type": "date",
+      "label": "Move in date ",
+      "required": true
+    },
+    {
+      "id": "question5",
+      "type": "radio",
+      "label": "Apartment Type",
+      "options": [
+        {
+          "label": "Furnished",
+          "value": "Furnished"
+        },
+        {
+          "label": "Non-Furnished",
+          "value": "Non-Furnished"
+        },
+        {
+          "label": "Semi-Furnished",
+          "value": "Semi-Furnished"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "question6",
+      "type": "checkbox",
+      "label": "I've a pet ",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ]
+    }
+  ]
+}

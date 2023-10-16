@@ -1,0 +1,33 @@
+/* Center the form container on the page */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(237, 223, 223);
+}
+.form-container {
+  background-color: #fff;
+  padding: 2rem;
+  height: 100vh;
+  width: 40vw;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.form-element {
+  max-width: 80%;
+}
+.submit-button {
+  background-color: rgb(76, 166, 234);
+  border: none;
+  color: white;
+  margin-top: 2rem;
+  height: 2rem;
+  width: 8rem;
+}
+.title-text {
+  text-align: center;
+  font-size: 2rem;
+}
+.alert{
+    color: rgb(242, 152, 83);
+}
